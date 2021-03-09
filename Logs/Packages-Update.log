@@ -61,3 +61,12 @@ The following packages were updated:
   com.unity.multiplayer-hlapi from version 1.0.4 to 1.0.8
   com.unity.purchasing from version 2.0.6 to 2.2.1
   com.unity.xr.legacyinputhelpers from version 2.0.4 to 2.1.7
+
+=== Mon Mar  8 16:11:59 2021
+
+Packages were changed.
+Update Mode: updateDependencies
+
+The following packages were updated:
+  com.unity.purchasing from version 2.2.1 to 2.2.2
+  com.unity.timeline from version 1.2.6 to 1.2.18

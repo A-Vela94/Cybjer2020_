@@ -5,6 +5,7 @@ using UnityEngine;
 //This script is given to ALL Gun prefabs////////////////////////////////////
 public class GunScript : MonoBehaviour
 {
+    public SoundHandler soundHandler;
     public GameObject Bullet;
     [Range(-2, 2)]
     public float bulletOffsetX;
@@ -211,6 +212,7 @@ public class GunScript : MonoBehaviour
             leftHandRender.sortingOrder = sprite.sortingOrder + 1;//+ layerOrder;
             rightHandRender.sortingOrder = sprite.sortingOrder + 1;//+ layerOrder;
         }
+        soundHandler = GetComponent<SoundHandler>();
     }
 
     // Update is called once per frame
@@ -331,6 +333,7 @@ public class GunScript : MonoBehaviour
                  (shoot == true && semi_temp <= 0 && (automaticAssault == false) || (shoot == true && automaticAssault == true && tempAssault <= 0) && tag == "EnemyWeapon"))
             {
                 shootCheck = true;
+                
             }
         }
 
@@ -388,6 +391,7 @@ public class GunScript : MonoBehaviour
 
             if (tag == "Weapon")
             {
+                soundHandler.PlayRifleSound();
                 Shaker.Shake(screenShakeDuration, screenShakeIntensity);
             }
 
